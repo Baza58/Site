@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Site</title>
+	<script src="bundle.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet'>
+</head>
+<body>
+	<header class="header-container container">
+		<div class="header-content content">
+			<img src="images/logo.png" alt="logo" class="header-img">
+			<nav class="header-nav">
+				<a href="#mission" class="header-nav-link">Our Mission</a>
+				<a href="#about" class="header-nav-link">About</a>
+				<a href="#team" class="header-nav-link">Team</a>
+				<a href="#" class="header-nav-link sign-in-link">Sign In</a>
+			</nav>
+		</div>
+	</header>
+	<section class="mission-container container" id="mission">
+		<div class="mission-content content">
+			<h2 class="mission-heading">Our Mission</h2>
+			<p class="mission-text">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
+			</p>
+		</div>
+	</section>
+	<section class="about-container container" id="about">
+		<div class="about-content content">
+			<h2 class="about-heading">About</h2>
+			<p class="about-text">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
+			</p>
+		</div>
+	</section>
+	<section class="team-container container" id="team">
+		<div class="team-content content">
+			<h2 class="team-heading">Team</h2>
+			<div class="team-person-container">
+				<div class="team-person">
+					<img src="images/person1.png" alt="person 1" class="team-person-img">
+					<h5 class="team-person-heading">John Doe</h5>
+					<h6 class="team-person-heading2">Founder & CEO</h6>
+				</div>
+				<div class="team-person">
+					<img src="images/person2.png" alt="person 2" class="team-person-img">
+					<h5 class="team-person-heading">John Doe</h5>
+					<h6 class="team-person-heading2">Co-Founder</h6>
+				</div>
+				<div class="team-person">
+					<img src="images/person3.png" alt="person 3" class="team-person-img">
+					<h5 class="team-person-heading">John Doe</h5>
+					<h6 class="team-person-heading2">Investor</h6>
+				</div>
+			</div>
+			<a href="#" class="team-link">Work with us</a>
+		</div>
+	</section>
+	<section class="map-container" id="map"></section>
+	<footer class="footer-container container">
+		<div class="footer-content content">
+			<div class="footer-box1">
+				<nav class="footer-nav">
+					<a href="#" class="footer-nav-link">About</a>
+					<a href="#" class="footer-nav-link">Faq</a>
+					<a href="#" class="footer-nav-link">Work with us</a>
+				</nav>
+				<div class="footer-social-container">
+					<a href="#" class="footer-social-link">
+						<img src="images/envelope.png" alt="envelope icon" class="footer-social-img">
+					</a>
+					<a href="#" class="footer-social-link">
+						<img src="images/fb.png" alt="facebook icon" class="footer-social-img">
+					</a>
+					<a href="#" class="footer-social-link">
+						<img src="images/twitter.png" alt="twitter" class="footer-social-img">
+					</a>
+				</div>
+			</div>
+			<div class="footer-line"></div>
+			<div class="footer-box2">
+				<nav class="footer-box2-nav">
+					<a href="#" class="footer-box2-link">Privacy Policy</a>
+					<a href="#" class="footer-box2-link">Terms and Conditions</a>
+					<a href="#" class="footer-box2-link">&copy; Copyright LLC 2014</a>
+				</nav>
+			</div>
+		</div>
+	</footer>
+	<script>
+		var map;
+		function initMap() {
+  			map = new google.maps.Map(document.getElementById('map'), {
+    			center: {lat: 50.078940, lng: 14.437800},
+    			zoom: 13,
+    			scrollwheel: false,
+    			disableDefaultUI: true,
+  			});
+		  
+		var marker = new google.maps.Marker({
+  			position: {lat: 50.078940, lng: 14.437800},
+   			map: map,
+   			icon: 'images/pin.png',
+   			title: 'hello'
+		});
+
+		var infowindow = new google.maps.InfoWindow({
+    		content: '<div><h1 class="map-heading">Company.com</h1><h2 class="map-heading2">xyz Street</h2><h2 class="map-heading2">Prague 1, CZ</h2></div>'
+  		});	
+    	infowindow.open(map, marker);
+	}
+	</script>
+	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALnoqDBpRMy4DQaCGNNUYG5tutEZn_Ek4&callback=initMap"></script>
+</body>
+</html>
